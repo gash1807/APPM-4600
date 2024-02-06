@@ -68,15 +68,15 @@ def bisection(f,a,b,tol,Nmax):
     return [astar,ier] 
 
 # use routines    
-f = lambda x: x**3+x-4
-a = 1
-b = 4
+f = lambda x: np.sin(x)
+a = .5
+b = 3*(np.pi/4)
 
 Nmax = 100
-tol = 1e-3
+tol = 10e-5
 
 [astar,ier] = bisection(f,a,b,tol,Nmax)
 print('the approximate root is',astar)
 print('the error message reads:',ier)
-
+print('f(astar)', f(astar))
 
